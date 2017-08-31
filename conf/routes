@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# we define a route for listing all the CDs and another one for submitting the form of adding them
+GET         /games                  controllers.Application.listGames
+POST        /games                  controllers.Application.createGame
+
+GET         /deals                  controllers.Application.showDeals
+
+GET         /account                controllers.Application.showAccount
+
+GET         /stores                 controllers.Application.showStores
